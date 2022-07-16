@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Fragments.StoreFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Shoe"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:paddingBottom="40dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp">
+                <EditText
+                    android:id="@+id/edit_name"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:background="@drawable/edit_text_decoration"
+                    android:hint="Name"
+                    android:padding="10dp"/>
+                <EditText
+                    android:id="@+id/edit_size"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/edit_text_decoration"
+                    android:hint="Size"
+                    android:padding="10dp"/>
+            </LinearLayout>
+            <EditText
+                android:id="@+id/edit_company"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_text_decoration"
+                android:hint="Company"
+                android:padding="10dp"
+                android:layout_marginVertical="20dp"
+                />
+            <EditText
+                android:id="@+id/edit_description"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_decoration"
+                android:hint="Description..."
+                android:gravity="top"
+                android:padding="10dp"
+                android:layout_marginVertical="20dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/cancel_btn"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Cancel"
+                    android:textColor="@color/design_default_color_primary"
+                    android:textAllCaps="false"
+                    android:background="@drawable/button_decoration1_transparent"/>
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <Button
+                    android:id="@+id/add_btn"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Add"
+                    android:textAllCaps="false"
+                    android:background="@drawable/button_decoratino1_primary_color"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

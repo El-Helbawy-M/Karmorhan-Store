@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    android:label="main_navigation"
+    app:startDestination="@id/signInFragment">
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.karmorhanstore.Fragments.SignInFragment"
+        android:label="Sign In">
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_onBoardingWelcomeFragment"
+            app:destination="@id/onBoardingWelcomeFragment"
+            app:popUpTo="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.karmorhanstore.Fragments.SignUpFragment"
+        android:label="Sign Up">
+        <action
+            android:id="@+id/action_signUpFragment_to_onBoardingWelcomeFragment"
+            app:destination="@id/onBoardingWelcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingWelcomeFragment"
+        android:name="com.example.karmorhanstore.Fragments.OnBoardingWelcomeFragment"
+        android:label="Welcome">
+        <action
+            android:id="@+id/action_onBoardingWelcomeFragment_to_onBoardingInstructionFragment"
+            app:destination="@id/onBoardingInstructionFragment"
+            app:popUpTo="@id/onBoardingWelcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingInstructionFragment"
+        android:name="com.example.karmorhanstore.Fragments.OnBoardingInstructionFragment"
+        android:label="Instruction">
+        <action
+            android:id="@+id/action_onBoardingInstructionFragment_to_storeFragment"
+            app:destination="@id/storeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/storeFragment"
+        android:name="com.example.karmorhanstore.Fragments.StoreFragment"
+        android:label="Store">
+        <action
+            android:id="@+id/action_storeFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment"
+            app:popUpTo="@id/storeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.example.karmorhanstore.Fragments.ProductDetailFragment"
+        android:label="Product Detail" />
+</navigation>
