@@ -58,3 +58,4 @@ class StoreFragment : Fragment() {
     }
 
 }
+
