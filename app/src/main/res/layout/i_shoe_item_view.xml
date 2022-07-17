@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical">
-
+            <!--t show the shoe name-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -25,18 +25,26 @@
                 android:textSize="25dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
+            <!--t show the shoe size-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{shoe.size}"
+                android:id="@+id/size"
+                android:textSize="15dp"/>
 
             <Space
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="0dp"/>
+            <!--to show the shoe company-->
             <TextView
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:text="@{shoe.company}"
                 android:textSize="20dp"/>
         </LinearLayout>
-
+        <!--t show the shoe description-->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

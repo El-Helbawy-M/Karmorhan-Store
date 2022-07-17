@@ -13,6 +13,7 @@
             android:layout_width="match_parent"
             android:orientation="vertical"
             >
+            <!--image for instruction scree-->
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -24,6 +25,7 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
+                <!--onBoarding title-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -31,6 +33,7 @@
                     android:textSize="30dp"
                     android:textStyle="bold"
                     android:textColor="@color/black"/>
+                <!--onBoarding content-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -49,6 +52,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_marginHorizontal="20dp">
+                    <!--onBoarding back button to back to welcome screen-->
                     <Button
                         android:id="@+id/back_btn"
                         android:layout_width="100dp"
@@ -62,6 +66,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="1"/>
+                    <!--onBoarding finish button to go to StoreFragment-->
                     <Button
                         android:id="@+id/finish_btn"
                         android:layout_width="100dp"

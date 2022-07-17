@@ -2,14 +2,11 @@ package com.example.karmorhanstore.Activites
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.viewModels
-import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.karmorhanstore.R
-import com.example.karmorhanstore.ViewModels.StoreViewModel
+import com.example.karmorhanstore.viewmodels.StoreViewModel
 
 class MainActivity : AppCompatActivity() {
     val viewModel:StoreViewModel by viewModels()

@@ -1,8 +1,8 @@
 package com.example.karmorhanstore.models
 
-data class Shoes( var name:String, var company:String, var size:Int = 0, var description:String){
+data class Shoes( var name:String, var company:String, var size:String = "0", var description:String){
     fun checkInput():Boolean{
-        return !(this.name.isEmpty()||this.description.isEmpty()||this.company.isEmpty()||this.size==0)
+        return !(this.name.isEmpty()||this.description.isEmpty()||this.company.isEmpty()||this.size.isEmpty())
     }
 }
 

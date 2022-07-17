@@ -2,6 +2,11 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.karmorhanstore.viewmodels.StoreViewModel" />
+    </data>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,7 +19,7 @@
             android:orientation="vertical"
             android:padding="20dp"
             >
-
+            <!--product detail screen label-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -29,6 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="20dp">
+                <!--for entering the name of the shoe-->
                 <EditText
                     android:id="@+id/edit_name"
                     android:layout_width="0dp"
@@ -36,7 +42,9 @@
                     android:layout_height="50dp"
                     android:background="@drawable/edit_text_decoration"
                     android:hint="Name"
+                    android:text="@={viewModel.product.name}"
                     android:padding="10dp"/>
+                <!--for entering the size of the shoe-->
                 <EditText
                     android:id="@+id/edit_size"
                     android:layout_width="100dp"
@@ -44,8 +52,11 @@
                     android:layout_marginLeft="20dp"
                     android:background="@drawable/edit_text_decoration"
                     android:hint="Size"
+                    android:inputType="number"
+                    android:text="@={viewModel.product.size}"
                     android:padding="10dp"/>
             </LinearLayout>
+            <!--for entering the company of the shoe-->
             <EditText
                 android:id="@+id/edit_company"
                 android:layout_width="match_parent"
@@ -53,8 +64,10 @@
                 android:background="@drawable/edit_text_decoration"
                 android:hint="Company"
                 android:padding="10dp"
+                android:text="@={viewModel.product.company}"
                 android:layout_marginVertical="20dp"
                 />
+            <!--for entering the description of the shoe-->
             <EditText
                 android:id="@+id/edit_description"
                 android:layout_width="match_parent"
@@ -63,12 +76,14 @@
                 android:background="@drawable/edit_text_decoration"
                 android:hint="Description..."
                 android:gravity="top"
+                android:text="@={viewModel.product.description}"
                 android:padding="10dp"
                 android:layout_marginVertical="20dp"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+                <!--cancel button to cancel the operation and go back to storeFragment-->
                 <Button
                     android:id="@+id/cancel_btn"
                     android:layout_width="100dp"
@@ -82,6 +97,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"/>
+                <!--add button to add new shoe and go back to storeFragment-->
                 <Button
                     android:id="@+id/add_btn"
                     android:layout_width="100dp"

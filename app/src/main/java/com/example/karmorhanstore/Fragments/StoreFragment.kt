@@ -6,13 +6,12 @@ import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.karmorhanstore.models.Shoes
 import com.example.karmorhanstore.R
-import com.example.karmorhanstore.ViewModels.StoreViewModel
+import com.example.karmorhanstore.viewmodels.StoreViewModel
 import com.example.karmorhanstore.databinding.FStoreBinding
 import com.example.karmorhanstore.databinding.IShoeItemViewBinding
 

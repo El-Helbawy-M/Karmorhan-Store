@@ -7,11 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import com.example.karmorhanstore.R
-import com.example.karmorhanstore.ViewModels.StoreViewModel
+import com.example.karmorhanstore.viewmodels.StoreViewModel
 import com.example.karmorhanstore.databinding.FProductDetailBinding
 
 class ProductDetailFragment : Fragment() {
@@ -27,10 +25,11 @@ class ProductDetailFragment : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(inflater,R.layout.f_product_detail,container,false)
         binding.cancelBtn.setOnClickListener(View.OnClickListener { binding.root.findNavController().popBackStack() })
-        binding.addBtn.setOnClickListener(View.OnClickListener { 
-            if(viewModel.addNewShoes(binding.editName.text.toString(),binding.editCompany.text.toString(),Integer.parseInt(binding.editSize.text.toString()),binding.editDescription.text.toString()))
+        binding.addBtn.setOnClickListener(View.OnClickListener {
+            if(viewModel.addNewShoes())
             binding.root.findNavController().popBackStack()
         })
+        binding.viewModel=viewModel
         return binding.root
     }
 
